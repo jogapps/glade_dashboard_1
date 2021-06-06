@@ -10,11 +10,10 @@ Widget AppBottomContent({context}) {
       AppWallet(context: context),
       SizedBox(height: 10),
       AppActivityBar(context: context),
-      Expanded(
-        child: SingleChildScrollView(
-          primary: true,
-          child: AppActivityItems(),
-        ),
+      SingleChildScrollView(
+        primary: true,
+        physics: BouncingScrollPhysics(),
+        child: AppActivityItems(),
       )
     ],
   ));
